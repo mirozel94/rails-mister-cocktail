@@ -1,26 +1,29 @@
-<h1 class="text-center">My cocktails</h1>
+  <h1 class="text-center">My cocktails</h1>
 
-<div class="text-center padded">
-  <%= link_to "Create a cocktail", new_cocktail_path, class: "btn btn-primary" %>
-</div>
 
-<div class="container">
-  <div class="row">
-    <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card text-center">
 
-          <% if cocktail.picture %>
-            <div class="card-header" style="background-image: url('<%= image_path cocktail.picture%>')">
+  <div class="container">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <div class="col-xs-12 col-sm-4">
+          <div class="card" style="background-image: url('<%= image_path cocktail.photo%>')">
+            <div class="card-description">
+              <%= link_to cocktail.name, cocktail_path(cocktail) %>
             </div>
-          <% else %>
-            <div class="card-header" style="background-image: url('http://www.seriouseats.com/images/2014/11/20141104-cocktail-party-old-fashioneds-holiday-vicky-wasik-3.jpg')">
-            </div>
-          <% end %>
-          <div class="card-body">
-            <%= link_to cocktail.name, cocktail_path(cocktail) %>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
+
+
+    <!--
+  <div class="card-category">Popular</div>
+  <div class="card-description">
+    <h2>Le Wagon Shanghai</h2>
+    <p>Very cool city, the best</p>
+  </div>
+  <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
+  <a class="card-link" href="#" ></a>
+</div>
+ -->

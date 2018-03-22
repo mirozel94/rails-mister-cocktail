@@ -1,12 +1,10 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <a href="/" class="navbar-wagon-brand">
-    <img src="images/logo.png" alt="logo">
-  </a>
-
+  <%= link_to image_tag("cocktail"), cocktails_path, {class: "navbar-wagon-brand"} %>
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Host</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Trips</a>
-    <a href="" class="navbar-wagon-item navbar-wagon-link">Messages</a>
+    <%= link_to "Create a cocktail", new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Drink water</a>
+    <a href="" class="navbar-wagon-item navbar-wagon-link">Login</a>
+  </div>
+</div>

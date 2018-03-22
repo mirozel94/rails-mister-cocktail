@@ -6,7 +6,7 @@
       <ul>
         <% @cocktail.doses.each do |dose| %>
           <li><%= dose.description %> of <%= dose.ingredient.name %> </li>
-          <li><%= link_to image_tag("bin", class: "action-icon"), dose_path(d), method: :delete, data: { confirm: 'Are you sure?' } %> </li>
+          <li><%= link_to image_tag("bin", class: "action-icon"), dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } %> </li>
         <% end %>
       </ul>
       <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
